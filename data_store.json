@@ -1,0 +1,565 @@
+{
+  "users": [
+    {
+      "id": "user_admin_001",
+      "username": "AdminMaster",
+      "email": "admin@adpulse.com",
+      "passwordHash": "$2a$10$0dLO.0AXiEawgLEfAtiLNOZgfBJ4V3JREd5CCA1INQpgAxQVti..e",
+      "role": "admin",
+      "points": 30200,
+      "totalEarned": 50210,
+      "totalWithdrawn": 20000,
+      "adsWatchedToday": 0,
+      "lastWatchTimestamp": null,
+      "streakDays": 5,
+      "lastStreakDate": "2026-09-10",
+      "referralCode": "ADMINVIP",
+      "referredBy": null,
+      "createdAt": "2026-09-10T13:55:50.069Z"
+    },
+    {
+      "id": "user_demo_002",
+      "username": "GlobalEarner99",
+      "email": "demo@adpulse.com",
+      "passwordHash": "$2a$10$4C.mOhIenl8rRgXVWfUltueO7xeogrfFaclnWgVJ55/9yspIVtb/O",
+      "role": "user",
+      "points": 45,
+      "totalEarned": 1550,
+      "totalWithdrawn": 1500,
+      "adsWatchedToday": 9,
+      "lastWatchTimestamp": 1789050111193,
+      "streakDays": 3,
+      "lastStreakDate": "2026-09-10",
+      "referralCode": "EARN777",
+      "referredBy": "ADMINVIP",
+      "createdAt": "2026-09-10T13:55:50.069Z"
+    }
+  ],
+  "ad_campaigns": [
+    {
+      "id": "ad_camp_01",
+      "title": "Binance Web3 Global Wallet",
+      "advertiser": "Binance Global",
+      "category": "Crypto & Web3",
+      "durationSeconds": 15,
+      "rewardPoints": 35,
+      "cpmUsd": 12.5,
+      "active": true,
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "thumbnail": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=600&q=80",
+      "ctaText": "Open Free Web3 Wallet",
+      "ctaUrl": "https://binance.com",
+      "rating": 4.9,
+      "viewsRemaining": 14997,
+      "country": "Global"
+    },
+    {
+      "id": "ad_camp_02",
+      "title": "Cyberpunk 2077 Phantom Liberty Trailer",
+      "advertiser": "CD PROJEKT RED",
+      "category": "Gaming",
+      "durationSeconds": 30,
+      "rewardPoints": 65,
+      "cpmUsd": 18,
+      "active": true,
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "thumbnail": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80",
+      "ctaText": "Get Game on Steam",
+      "ctaUrl": "https://store.steampowered.com",
+      "rating": 4.8,
+      "viewsRemaining": 8397,
+      "country": "Global"
+    },
+    {
+      "id": "ad_camp_03",
+      "title": "Shopify: Launch Your Global Store in 60s",
+      "advertiser": "Shopify Inc.",
+      "category": "E-Commerce & SaaS",
+      "durationSeconds": 20,
+      "rewardPoints": 45,
+      "cpmUsd": 15,
+      "active": true,
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "thumbnail": "https://images.unsplash.com/photo-1556742049-0a67e557224f?w=600&q=80",
+      "ctaText": "Start $1/Month Trial",
+      "ctaUrl": "https://shopify.com",
+      "rating": 4.9,
+      "viewsRemaining": 22000,
+      "country": "Global"
+    },
+    {
+      "id": "ad_camp_04",
+      "title": "NordVPN: Secure Internet & Streaming",
+      "advertiser": "Nord Security",
+      "category": "Cybersecurity",
+      "durationSeconds": 25,
+      "rewardPoints": 55,
+      "cpmUsd": 16.5,
+      "active": true,
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+      "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+      "ctaText": "Claim 70% Discount + 3 Mo",
+      "ctaUrl": "https://nordvpn.com",
+      "rating": 4.7,
+      "viewsRemaining": 12000,
+      "country": "Global"
+    },
+    {
+      "id": "ad_camp_05",
+      "title": "Revolut Ultra: Multi-Currency Premium Card",
+      "advertiser": "Revolut Ltd",
+      "category": "Fintech & Banking",
+      "durationSeconds": 15,
+      "rewardPoints": 40,
+      "cpmUsd": 14,
+      "active": true,
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "thumbnail": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&q=80",
+      "ctaText": "Order Metal Card",
+      "ctaUrl": "https://revolut.com",
+      "rating": 4.9,
+      "viewsRemaining": 9500,
+      "country": "Global"
+    },
+    {
+      "id": "ad_camp_06",
+      "title": "Raid: Shadow Legends - New Champions",
+      "advertiser": "Plarium Games",
+      "category": "Mobile RPG",
+      "durationSeconds": 30,
+      "rewardPoints": 75,
+      "cpmUsd": 20,
+      "active": true,
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "thumbnail": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=600&q=80",
+      "ctaText": "Play Free on PC & Mobile",
+      "ctaUrl": "https://plarium.com",
+      "rating": 4.6,
+      "viewsRemaining": 30000,
+      "country": "Global"
+    }
+  ],
+  "ad_views": [
+    {
+      "id": "10ed6abe-e02e-4928-a1bd-7815d328842a",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_01",
+      "watchToken": "8f6e8dcd-fee4-4aa7-bf6c-f7a5130b7f57",
+      "startedAt": 1789048693541,
+      "minDurationSeconds": 15,
+      "rewardPoints": 35,
+      "completed": true,
+      "completedAt": 1789048778380
+    },
+    {
+      "id": "06ddca28-6fac-4d08-bc2b-881ffc6288bf",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_02",
+      "watchToken": "7581b765-c671-41d4-8177-351a0b7c3004",
+      "startedAt": 1789049914573,
+      "minDurationSeconds": 30,
+      "rewardPoints": 65,
+      "completed": true,
+      "completedAt": 1789049950974
+    },
+    {
+      "id": "dd56dc90-6346-47be-a8c1-9a2252722ed8",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_01",
+      "watchToken": "5660c6f1-cb29-4f57-ad6f-632003a36fb1",
+      "startedAt": 1789049927990,
+      "minDurationSeconds": 15,
+      "rewardPoints": 35,
+      "completed": true,
+      "completedAt": 1789049967453
+    },
+    {
+      "id": "84bf76bd-06ff-42b6-aab4-c0ecad4148a2",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_02",
+      "watchToken": "a20f3ce5-7f82-4e0d-ae9f-b606b13d9a85",
+      "startedAt": 1789049974824,
+      "minDurationSeconds": 30,
+      "rewardPoints": 65,
+      "completed": false
+    },
+    {
+      "id": "570f367b-581f-4322-94d6-570ba38a90f7",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_02",
+      "watchToken": "47924a03-8ba3-469f-8196-b301d8476de1",
+      "startedAt": 1789049985008,
+      "minDurationSeconds": 30,
+      "rewardPoints": 65,
+      "completed": true,
+      "completedAt": 1789050017358
+    },
+    {
+      "id": "0555fccf-91ca-405c-9cdd-fc656eddb07b",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_02",
+      "watchToken": "79515041-0916-4156-8d38-e833d9cea632",
+      "startedAt": 1789050020307,
+      "minDurationSeconds": 30,
+      "rewardPoints": 65,
+      "completed": false
+    },
+    {
+      "id": "0d175969-ec8a-4a3c-8bac-a9f7ec3aa519",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_02",
+      "watchToken": "0b1d8a83-f3a3-44a7-8ce2-26d174850873",
+      "startedAt": 1789050027900,
+      "minDurationSeconds": 30,
+      "rewardPoints": 65,
+      "completed": true,
+      "completedAt": 1789050069939
+    },
+    {
+      "id": "087b14b8-e770-4d58-bdde-71add3b2d3c8",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_01",
+      "watchToken": "f7de2c7f-8882-4d15-946f-15ace498813f",
+      "startedAt": 1789050075209,
+      "minDurationSeconds": 15,
+      "rewardPoints": 35,
+      "completed": false
+    },
+    {
+      "id": "c855b803-fdd3-45b6-aaa4-7a5d71bd1392",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_03",
+      "watchToken": "d17ba8e4-e7fa-4d63-9151-31d9ca7675f2",
+      "startedAt": 1789050079361,
+      "minDurationSeconds": 20,
+      "rewardPoints": 45,
+      "completed": false
+    },
+    {
+      "id": "b2787c13-e464-43ec-bfe8-ee692c2b02c9",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_01",
+      "watchToken": "a7ae132b-b2ed-4891-bd68-cd0520df569b",
+      "startedAt": 1789050086253,
+      "minDurationSeconds": 15,
+      "rewardPoints": 35,
+      "completed": false
+    },
+    {
+      "id": "1479b09a-5d15-4d53-96ad-28eaec1827bd",
+      "userId": "user_demo_002",
+      "campaignId": "ad_camp_01",
+      "watchToken": "44c163e0-e9e4-4bee-9526-d09ce7b6e57c",
+      "startedAt": 1789050090174,
+      "minDurationSeconds": 15,
+      "rewardPoints": 35,
+      "completed": true,
+      "completedAt": 1789050111183
+    }
+  ],
+  "transactions": [
+    {
+      "id": "c87ed977-0b69-47f4-b148-2fc14256a712",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 5,
+      "usdAmount": 0.005,
+      "description": "Lucky Spin: Won 15 Coins (Net +5 coins)",
+      "timestamp": "2026-09-12T05:10:31.358Z"
+    },
+    {
+      "id": "3180749f-abad-476f-858d-e7e624cda8f9",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 40,
+      "usdAmount": 0.04,
+      "description": "Lucky Spin: Won 50 Coins (Net +40 coins)",
+      "timestamp": "2026-09-12T05:10:15.446Z"
+    },
+    {
+      "id": "6f34df2d-f00f-495e-9be0-a8a7367fadfa",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": -5,
+      "usdAmount": -0.005,
+      "description": "Lucky Spin: Won 5 Coins (Net +-5 coins)",
+      "timestamp": "2026-09-12T05:10:10.403Z"
+    },
+    {
+      "id": "81f33db4-50df-40b7-9928-d780041b28da",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 20,
+      "usdAmount": 0.02,
+      "description": "Lucky Spin: Won 30 Coins (Net +20 coins)",
+      "timestamp": "2026-09-12T05:10:05.287Z"
+    },
+    {
+      "id": "e1188ee0-4ca6-4658-ad0b-e409c34af21f",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 20,
+      "usdAmount": 0.02,
+      "description": "Lucky Spin: Won 30 Coins (Net +20 coins)",
+      "timestamp": "2026-09-12T05:10:00.412Z"
+    },
+    {
+      "id": "df27ba54-b0e2-4a30-abdf-912f7d766c5a",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 40,
+      "usdAmount": 0.04,
+      "description": "Lucky Spin: Won 50 Coins (Net +40 coins)",
+      "timestamp": "2026-09-12T05:09:54.632Z"
+    },
+    {
+      "id": "997eb08f-09f0-4c4a-a9d3-2b35f0527a7b",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 20,
+      "usdAmount": 0.02,
+      "description": "Lucky Spin: Won 30 Coins (Net +20 coins)",
+      "timestamp": "2026-09-12T05:09:48.045Z"
+    },
+    {
+      "id": "ebf2f2ca-6c3e-4011-98ec-34f5f35f5547",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": -5,
+      "usdAmount": -0.005,
+      "description": "Lucky Spin: Won 5 Coins (Net +-5 coins)",
+      "timestamp": "2026-09-12T05:09:43.107Z"
+    },
+    {
+      "id": "854a7038-5850-4068-bc0a-36a97940935d",
+      "userId": "user_admin_001",
+      "type": "lucky_spin",
+      "points": 20,
+      "usdAmount": 0.02,
+      "description": "Lucky Spin: Won 30 Coins (Net +20 coins)",
+      "timestamp": "2026-09-12T05:09:37.621Z"
+    },
+    {
+      "id": "e17d3e2e-f953-4d89-90a5-692d4472b3b2",
+      "userId": "user_admin_001",
+      "type": "withdrawal",
+      "points": -20000,
+      "usdAmount": -20,
+      "description": "Withdrawal Request: $20.00 via USDT-TRC20",
+      "timestamp": "2026-09-10T14:33:34.693Z"
+    },
+    {
+      "id": "41739b85-f0a0-4023-a8ea-74514cb5fe4a",
+      "userId": "user_demo_002",
+      "type": "withdrawal",
+      "points": -1000,
+      "usdAmount": -1,
+      "description": "Withdrawal Request: $1.00 via USDT-TRC20",
+      "timestamp": "2026-09-10T14:25:51.101Z"
+    },
+    {
+      "id": "414bd0dd-b394-43a5-91b6-37ba154c1dab",
+      "userId": "user_admin_001",
+      "type": "referral_bonus",
+      "points": 5,
+      "usdAmount": 0.005,
+      "description": "15% Commission from referral GlobalEarner99's ad watch",
+      "timestamp": "2026-09-10T14:21:51.183Z"
+    },
+    {
+      "id": "2704152d-dad9-4986-8fad-adb24aeb731c",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 35,
+      "usdAmount": 0.035,
+      "description": "Watched ad: \"Binance Web3 Global Wallet\" (15s)",
+      "timestamp": "2026-09-10T14:21:51.183Z"
+    },
+    {
+      "id": "f1b52d74-6320-418b-953a-7a8277360f01",
+      "userId": "user_admin_001",
+      "type": "referral_bonus",
+      "points": 10,
+      "usdAmount": 0.01,
+      "description": "15% Commission from referral GlobalEarner99's ad watch",
+      "timestamp": "2026-09-10T14:21:09.939Z"
+    },
+    {
+      "id": "c7e2a8d8-6a8b-43cb-8390-d013cde3750b",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 65,
+      "usdAmount": 0.065,
+      "description": "Watched ad: \"Cyberpunk 2077 Phantom Liberty Trailer\" (30s)",
+      "timestamp": "2026-09-10T14:21:09.939Z"
+    },
+    {
+      "id": "f4699f03-0a39-4de3-826e-ce243ba1fcac",
+      "userId": "user_admin_001",
+      "type": "referral_bonus",
+      "points": 10,
+      "usdAmount": 0.01,
+      "description": "15% Commission from referral GlobalEarner99's ad watch",
+      "timestamp": "2026-09-10T14:20:17.359Z"
+    },
+    {
+      "id": "0748eee8-7537-4ea2-b81c-eedfd4188529",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 65,
+      "usdAmount": 0.065,
+      "description": "Watched ad: \"Cyberpunk 2077 Phantom Liberty Trailer\" (30s)",
+      "timestamp": "2026-09-10T14:20:17.359Z"
+    },
+    {
+      "id": "8656e084-2b65-4d38-8d05-4f55d733e0fc",
+      "userId": "user_admin_001",
+      "type": "referral_bonus",
+      "points": 5,
+      "usdAmount": 0.005,
+      "description": "15% Commission from referral GlobalEarner99's ad watch",
+      "timestamp": "2026-09-10T14:19:27.453Z"
+    },
+    {
+      "id": "c42b7457-de46-4125-8ecd-0140428b6157",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 35,
+      "usdAmount": 0.035,
+      "description": "Watched ad: \"Binance Web3 Global Wallet\" (15s)",
+      "timestamp": "2026-09-10T14:19:27.453Z"
+    },
+    {
+      "id": "3c5708b5-378f-49c8-9c45-537e86489b25",
+      "userId": "user_admin_001",
+      "type": "referral_bonus",
+      "points": 10,
+      "usdAmount": 0.01,
+      "description": "15% Commission from referral GlobalEarner99's ad watch",
+      "timestamp": "2026-09-10T14:19:10.974Z"
+    },
+    {
+      "id": "5fbbf300-6b40-4742-8e8c-2bacfa998ef5",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 65,
+      "usdAmount": 0.065,
+      "description": "Watched ad: \"Cyberpunk 2077 Phantom Liberty Trailer\" (30s)",
+      "timestamp": "2026-09-10T14:19:10.974Z"
+    },
+    {
+      "id": "eccf2602-0ccb-4ffc-b737-b25e9eb289a5",
+      "userId": "user_demo_002",
+      "type": "lucky_spin",
+      "points": -5,
+      "usdAmount": -0.005,
+      "description": "Lucky Spin: Won 5 Coins (Net +-5 coins)",
+      "timestamp": "2026-09-10T14:03:27.131Z"
+    },
+    {
+      "id": "f413a8c2-0f58-4ad4-84ca-36d2064ee196",
+      "userId": "user_admin_001",
+      "type": "referral_bonus",
+      "points": 5,
+      "usdAmount": 0.005,
+      "description": "15% Commission from referral GlobalEarner99's ad watch",
+      "timestamp": "2026-09-10T13:59:38.380Z"
+    },
+    {
+      "id": "e9ca53a9-14e1-4077-8074-a34c488206f0",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 35,
+      "usdAmount": 0.035,
+      "description": "Watched ad: \"Binance Web3 Global Wallet\" (15s)",
+      "timestamp": "2026-09-10T13:59:38.380Z"
+    },
+    {
+      "id": "65954841-a1a6-419c-a28e-3fd17f98d0b7",
+      "userId": "user_demo_002",
+      "type": "daily_bonus",
+      "points": 60,
+      "usdAmount": 0.06,
+      "description": "Day 3 Daily Check-In Streak Bonus",
+      "timestamp": "2026-09-09T13:55:50.070Z"
+    },
+    {
+      "id": "cae27917-1472-44dd-bfde-f06ee2460b07",
+      "userId": "user_demo_002",
+      "type": "ad_watch",
+      "points": 45,
+      "usdAmount": 0.045,
+      "description": "Watched \"FinTech Crypto Card\" 30s Ad",
+      "timestamp": "2026-09-10T08:55:50.070Z"
+    },
+    {
+      "id": "2e434b95-c06e-4069-853a-089cbdc685be",
+      "userId": "user_demo_002",
+      "type": "lucky_spin",
+      "points": 100,
+      "usdAmount": 0.1,
+      "description": "Won 100 Points on Lucky Spin Wheel",
+      "timestamp": "2026-09-10T11:55:50.070Z"
+    }
+  ],
+  "payout_requests": [
+    {
+      "id": "payout_71bb0e26",
+      "userId": "user_admin_001",
+      "username": "AdminMaster",
+      "method": "USDT-TRC20",
+      "payoutDetails": "TG1MJFoReMLdEzoaRGjeNkmczvmn4MgWZ3",
+      "pointsDeducted": 20000,
+      "usdAmount": 20,
+      "status": "paid",
+      "txHash": "TX_1gy4n2d",
+      "adminNote": "",
+      "createdAt": "2026-09-10T14:33:34.691Z",
+      "updatedAt": "2026-09-10T14:34:17.494Z"
+    },
+    {
+      "id": "payout_68ad4eaa",
+      "userId": "user_demo_002",
+      "username": "GlobalEarner99",
+      "method": "USDT-TRC20",
+      "payoutDetails": "0x202B07CEe5BC47e1DF49F53870C4C8338943421f",
+      "pointsDeducted": 1000,
+      "usdAmount": 1,
+      "status": "paid",
+      "txHash": "TX_fdmm76o",
+      "adminNote": "",
+      "createdAt": "2026-09-10T14:25:51.099Z",
+      "updatedAt": "2026-09-10T14:34:19.940Z"
+    },
+    {
+      "id": "payout_demo_01",
+      "userId": "user_demo_002",
+      "username": "GlobalEarner99",
+      "method": "USDT-TRC20",
+      "payoutDetails": "TJ5uK9hZ2...TRC20Wallet",
+      "pointsDeducted": 500,
+      "usdAmount": 0.5,
+      "status": "paid",
+      "txHash": "0x8f27ab...c93b1",
+      "createdAt": "2026-09-08T13:55:50.070Z",
+      "updatedAt": "2026-09-09T13:55:50.070Z"
+    }
+  ],
+  "referrals": [],
+  "settings": {
+    "pointsPerUsd": 1000,
+    "minWithdrawalUsd": 1,
+    "dailyWatchLimit": 40,
+    "referralCommissionPct": 15,
+    "luckySpinCost": 10,
+    "dailyStreakBonuses": [
+      20,
+      40,
+      60,
+      80,
+      120,
+      160,
+      300
+    ]
+  }
+}

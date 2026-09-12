@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdPulse Global — Watch Videos & Earn Real Cash & Crypto</title>
+  <meta name="description" content="Watch high-definition sponsored video ads, complete daily streaks, spin the lucky wheel, and earn instant cash rewards via PayPal, USDT, Bitcoin, UPI, and Gift Cards worldwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Dynamic Glow Background -->
+  <div class="bg-glow-container">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-logo" id="btnLogoHome">
+        <div class="logo-icon-pulse">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Ad<span class="brand-accent">Pulse</span></span>
+          <span class="brand-tag">GLOBAL REWARDS</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-tab active" data-tab="watch"><i class="fa-solid fa-film"></i> <span>Watch Ads</span></button>
+        <button class="nav-tab" data-tab="arena"><i class="fa-solid fa-gift"></i> <span>Earn Arena</span></button>
+        <button class="nav-tab" data-tab="withdraw"><i class="fa-solid fa-wallet"></i> <span>Cashout</span></button>
+        <button class="nav-tab" data-tab="referral"><i class="fa-solid fa-user-plus"></i> <span>Refer & Earn</span></button>
+        <button class="nav-tab" data-tab="history"><i class="fa-solid fa-receipt"></i> <span>History</span></button>
+        <button class="nav-tab admin-only hidden" id="adminNavTab" data-tab="admin"><i class="fa-solid fa-shield-halved"></i> <span>Admin Hub</span></button>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Logged Out Actions -->
+        <div class="auth-buttons" id="loggedOutActions">
+          <button class="btn btn-outline" id="btnOpenLogin"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+          <button class="btn btn-primary" id="btnOpenRegister"><i class="fa-solid fa-sparkles"></i> Sign Up (+100 Coins)</button>
+        </div>
+
+        <!-- Logged In User Pill -->
+        <div class="user-profile-pill hidden" id="loggedInActions">
+          <div class="balance-display" id="btnHeaderWallet">
+            <div class="coin-badge">
+              <i class="fa-solid fa-coins"></i>
+              <span id="headerCoins">0</span>
+            </div>
+            <div class="usd-badge">
+              <span id="headerUsd">$0.00</span>
+            </div>
+          </div>
+          <div class="user-avatar-menu">
+            <button class="avatar-btn" id="avatarMenuBtn">
+              <div class="avatar-circle" id="userInitial">U</div>
+              <span class="avatar-name" id="userDisplayName">User</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-card hidden" id="userDropdown">
+              <div class="dropdown-header">
+                <span class="dropdown-email" id="dropdownEmail">user@example.com</span>
+                <span class="dropdown-badge" id="dropdownRole">Standard Tier</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item" id="btnQuickCashout"><i class="fa-solid fa-money-bill-transfer"></i> Quick Withdraw</button>
+              <button class="dropdown-item" id="btnQuickReferral"><i class="fa-solid fa-share-nodes"></i> Invite Friends (15%)</button>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item text-danger" id="btnLogout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main View Container -->
+  <main class="main-content">
+    
+    <!-- BANNER TICKER -->
+    <div class="live-payout-ticker">
+      <div class="ticker-label"><i class="fa-solid fa-bolt"></i> LIVE PAYOUTS:</div>
+      <div class="ticker-marquee">
+        <div class="ticker-content" id="tickerContent">
+          <span>⚡ <strong class="text-accent">Alex K.</strong> just withdrew <strong>$5.00 USDT</strong></span>
+          <span>🎁 <strong class="text-accent">Priya S.</strong> redeemed <strong>$10 Amazon Card</strong></span>
+          <span>🔥 <strong class="text-accent">David M.</strong> earned <strong>150 Coins</strong> on Lucky Spin</span>
+          <span>⚡ <strong class="text-accent">Elena R.</strong> withdrew <strong>$15.00 PayPal</strong></span>
+          <span>💎 <strong class="text-accent">Carlos T.</strong> hit <strong>7-Day Streak Bonus</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 1: WATCH ADS HUB -->
+    <section class="tab-pane active" id="tab-watch">
+      <div class="section-hero">
+        <div class="hero-text-content">
+          <div class="hero-badge"><i class="fa-solid fa-play-circle"></i> HIGH-YIELD SPONSOR VIDEOS</div>
+          <h1 class="hero-title">Watch Ads. <span class="gradient-text">Earn Real Global Cash.</span></h1>
+          <p class="hero-subtitle">Every video you watch generates real advertiser revenue. We share up to 70% directly to your balance. 1,000 Coins = $1.00 USD. Cash out anytime!</p>
+        </div>
+        <div class="hero-stats-card glass-card">
+          <div class="hero-stat-item">
+            <span class="stat-label">Daily Limit</span>
+            <span class="stat-val" id="watchDailyLimit">0 / 40</span>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="dailyLimitBar" style="width: 0%"></div></div>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-label">Current Conversion</span>
+            <span class="stat-val text-accent">1,000 Coins = $1.00 USD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-filter-bar">
+        <button class="filter-pill active" data-cat="all">All Campaigns</button>
+        <button class="filter-pill" data-cat="Crypto & Web3">Crypto & Web3</button>
+        <button class="filter-pill" data-cat="Gaming">Gaming</button>
+        <button class="filter-pill" data-cat="E-Commerce & SaaS">E-Commerce</button>
+        <button class="filter-pill" data-cat="Cybersecurity">Cybersecurity</button>
+        <button class="filter-pill" data-cat="Fintech & Banking">Fintech</button>
+      </div>
+
+      <!-- A-Ads Live Crypto Monetization Placement -->
+      <div class="aads-crypto-banner-box hidden" id="aadsBannerWatch">
+        <div class="aads-header-tag">
+          <i class="fa-brands fa-bitcoin"></i> Sponsored Crypto Network • A-Ads
+        </div>
+        <div class="aads-iframe-wrap" id="aadsIframeWatch">
+          <!-- Dynamic A-Ads Iframe loaded via JS -->
+        </div>
+      </div>
+
+      <!-- Ads Grid -->
+      <div class="ads-grid" id="adsGrid">
+        <!-- Generated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- TAB 2: EARN ARENA -->
+    <section class="tab-pane" id="tab-arena">
+      <div class="arena-layout">
+        <!-- 7-Day Streak Daily Bonus -->
+        <div class="glass-card arena-card streak-card">
+          <div class="card-header-flex">
+            <div>
+              <div class="badge-tag badge-gold"><i class="fa-solid fa-fire"></i> DAILY RETENTION REWARDS</div>
+              <h2 class="card-title">7-Day Check-In Streak</h2>
+              <p class="card-desc">Check in every 24 hours to stack massive coin multipliers. Reach Day 7 for a 300 Coin Jackpot!</p>
+            </div>
+            <button class="btn btn-gold" id="btnClaimDailyStreak"><i class="fa-solid fa-gift"></i> Claim Today</button>
+          </div>
+          <div class="streak-grid" id="streakGrid">
+            <!-- Day 1 - 7 items generated dynamically -->
+          </div>
+        </div>
+
+        <div class="arena-two-col">
+          <!-- Lucky Spin Wheel -->
+          <div class="glass-card arena-card spin-card">
+            <div class="badge-tag badge-purple"><i class="fa-solid fa-rotate"></i> TEST YOUR LUCK</div>
+            <h2 class="card-title">Lucky Spin Wheel</h2>
+            <p class="card-desc">Costs 10 Coins per spin. Win up to <strong class="text-gold">500 Coins (Jackpot)</strong>!</p>
+            
+            <div class="wheel-wrapper">
+              <div class="wheel-pointer"></div>
+              <canvas id="luckyWheelCanvas" width="340" height="340"></canvas>
+            </div>
+
+            <div class="wheel-actions">
+              <button class="btn btn-primary btn-lg" id="btnSpinWheel">
+                <i class="fa-solid fa-arrows-rotate"></i> Spin Wheel (10 Coins)
+              </button>
+              <span class="spin-hint" id="spinResultHint">Spin to multiply your balance!</span>
+            </div>
+          </div>
+
+          <!-- Micro Quests & Bonus Offers -->
+          <div class="glass-card arena-card offers-card">
+            <div class="badge-tag badge-cyan"><i class="fa-solid fa-list-check"></i> FAST TASKS</div>
+            <h2 class="card-title">Bonus Micro Quests</h2>
+            <p class="card-desc">Complete simple high-paying tasks to supercharge your earnings.</p>
+
+            <div class="quest-list">
+              <div class="quest-item">
+                <div class="quest-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <div class="quest-info">
+                  <div class="quest-title">Verify Email Address</div>
+                  <div class="quest-reward">+50 Coins</div>
+                </div>
+                <button class="btn btn-sm btn-outline quest-btn" onclick="app.completeQuickQuest('email')">Complete</button>
+              </div>
+
+              <div class="quest-item">
+                <div class="quest-icon"><i class="fa-brands fa-telegram"></i></div>
+                <div class="quest-info">
+                  <div class="quest-title">Join AdPulse Global Telegram Channel</div>
+                  <div class="quest-reward">+80 Coins</div>
+                </div>
+                <button class="btn btn-sm btn-outline quest-btn" onclick="app.completeQuickQuest('telegram')">Join</button>
+              </div>
+
+              <div class="quest-item">
+                <div class="quest-icon"><i class="fa-brands fa-x-twitter"></i></div>
+                <div class="quest-info">
+                  <div class="quest-title">Follow & Retweet Announcement</div>
+                  <div class="quest-reward">+70 Coins</div>
+                </div>
+                <button class="btn btn-sm btn-outline quest-btn" onclick="app.completeQuickQuest('twitter')">Follow</button>
+              </div>
+
+              <div class="quest-item">
+                <div class="quest-icon"><i class="fa-solid fa-star"></i></div>
+                <div class="quest-info">
+                  <div class="quest-title">Rate 5 Stars on TrustPilot</div>
+                  <div class="quest-reward">+150 Coins</div>
+                </div>
+                <button class="btn btn-sm btn-outline quest-btn" onclick="app.completeQuickQuest('review')">Review</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: WITHDRAW / CASHOUT -->
+    <section class="tab-pane" id="tab-withdraw">
+      <div class="withdraw-container">
+        <div class="withdraw-hero glass-card">
+          <div class="withdraw-balance-box">
+            <span class="box-label">Available Cashout Balance</span>
+            <div class="balance-big">
+              <span class="coins-big"><i class="fa-solid fa-coins text-gold"></i> <span id="withdrawCoinsVal">0</span></span>
+              <span class="usd-big" id="withdrawUsdVal">≈ $0.00 USD</span>
+            </div>
+            <p class="min-threshold-note"><i class="fa-solid fa-circle-info"></i> Minimum withdrawal is only <strong>$1.00 (1,000 Coins)</strong>. Fast 24-48h processing.</p>
+          </div>
+        </div>
+
+        <div class="withdraw-grid-layout">
+          <!-- Payout Methods Selection -->
+          <div class="glass-card payout-methods-card">
+            <h3 class="card-subtitle"><i class="fa-solid fa-globe"></i> 1. Select Payout Method</h3>
+            
+            <div class="methods-grid">
+              <div class="method-card active" data-method="PayPal">
+                <div class="method-icon"><i class="fa-brands fa-paypal"></i></div>
+                <div class="method-name">PayPal</div>
+                <div class="method-fee">Fee: $0.00</div>
+              </div>
+
+              <div class="method-card" data-method="USDT-TRC20">
+                <div class="method-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                <div class="method-name">USDT (TRC20 / BEP20)</div>
+                <div class="method-fee">Instant Crypto</div>
+              </div>
+
+              <div class="method-card" data-method="Bitcoin">
+                <div class="method-icon"><i class="fa-brands fa-bitcoin"></i></div>
+                <div class="method-name">Bitcoin (BTC)</div>
+                <div class="method-fee">Direct Wallet</div>
+              </div>
+
+              <div class="method-card" data-method="Amazon Gift Card">
+                <div class="method-icon"><i class="fa-brands fa-amazon"></i></div>
+                <div class="method-name">Amazon Gift Card</div>
+                <div class="method-fee">E-Code Global</div>
+              </div>
+
+              <div class="method-card" data-method="Google Play Card">
+                <div class="method-icon"><i class="fa-brands fa-google-play"></i></div>
+                <div class="method-name">Google Play Card</div>
+                <div class="method-fee">Digital Voucher</div>
+              </div>
+
+              <div class="method-card" data-method="UPI / Bank Transfer">
+                <div class="method-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="method-name">UPI / Direct Bank</div>
+                <div class="method-fee">Local Payout</div>
+              </div>
+
+              <div class="method-card" data-method="Commercial Bank SL">
+                <div class="method-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div class="method-name">Commercial Bank 🇱🇰</div>
+                <div class="method-fee">Instant LKR Deposit</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cashout Form -->
+          <div class="glass-card payout-form-card">
+            <h3 class="card-subtitle"><i class="fa-solid fa-money-check-dollar"></i> 2. Enter Details & Submit</h3>
+            
+            <form id="formCashout">
+              <div class="form-group">
+                <label class="form-label" id="payoutDestinationLabel">PayPal Email Address</label>
+                <input type="text" class="form-input" id="payoutDetailsInput" placeholder="your-email@paypal.com" required>
+              </div>
+
+              <!-- Commercial Bank SL Extra Fields (hidden by default) -->
+              <div class="bank-sl-fields hidden" id="bankSlFields">
+                <div class="form-group">
+                  <label class="form-label">Branch Name / Code</label>
+                  <input type="text" class="form-input" id="bankSlBranch" placeholder="e.g. Colombo Fort, Kandy City Centre">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Account Holder Full Name</label>
+                  <input type="text" class="form-input" id="bankSlHolderName" placeholder="As registered on your bank account">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">NIC Number (Optional)</label>
+                  <input type="text" class="form-input" id="bankSlNic" placeholder="e.g. 200012345678 or 901234567V">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Amount in Coins</label>
+                <div class="input-with-addons">
+                  <input type="number" class="form-input" id="payoutCoinsInput" min="1000" step="100" placeholder="e.g. 1000" required>
+                  <button type="button" class="btn btn-sm btn-outline addon-max" id="btnPayoutMax">MAX</button>
+                </div>
+                <div class="amount-calc-preview" id="amountCalcPreview">You will receive: <strong>$0.00 USD</strong></div>
+                <div class="lkr-calc-preview hidden" id="lkrCalcPreview">≈ <strong>LKR 0.00</strong> (rate: 1 USD ≈ 298 LKR)</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="btnSubmitWithdrawal">
+                <i class="fa-solid fa-paper-plane"></i> Submit Cashout Request
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Previous Withdrawal History -->
+        <div class="glass-card payout-history-card">
+          <h3 class="card-subtitle"><i class="fa-solid fa-clock-rotate-left"></i> Your Payout Requests</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Request ID</th>
+                  <th>Method</th>
+                  <th>Destination</th>
+                  <th>Coins</th>
+                  <th>USD Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="payoutsTableBody">
+                <tr><td colspan="7" class="text-muted text-center">No withdrawal requests yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: REFERRAL SYSTEM -->
+    <section class="tab-pane" id="tab-referral">
+      <div class="referral-layout">
+        <div class="glass-card referral-hero">
+          <div class="badge-tag badge-cyan"><i class="fa-solid fa-share-nodes"></i> VIRAL PARTNER PROGRAM</div>
+          <h1 class="hero-title">Invite Friends. <span class="gradient-text">Earn 15% Passive Lifetime Income.</span></h1>
+          <p class="hero-subtitle">Whenever your referred friend watches an ad or completes a reward task, you receive a 15% instant bonus credited straight to your balance!</p>
+
+          <div class="referral-link-box">
+            <div class="link-label">Your Unique Referral Link:</div>
+            <div class="link-input-group">
+              <input type="text" class="form-input referral-link-input" id="referralLinkInput" readonly value="https://adpulse.world?ref=...">
+              <button class="btn btn-primary" id="btnCopyRefLink"><i class="fa-solid fa-copy"></i> Copy Link</button>
+            </div>
+          </div>
+
+          <div class="ref-stats-grid">
+            <div class="ref-stat-box">
+              <span class="ref-stat-num" id="refTotalInvited">0</span>
+              <span class="ref-stat-lbl">Friends Joined</span>
+            </div>
+            <div class="ref-stat-box">
+              <span class="ref-stat-num text-gold" id="refTotalEarnedCoins">0</span>
+              <span class="ref-stat-lbl">Commission Coins</span>
+            </div>
+            <div class="ref-stat-box">
+              <span class="ref-stat-num text-accent" id="refTotalEarnedUsd">$0.00</span>
+              <span class="ref-stat-lbl">USD Earned</span>
+            </div>
+            <div class="ref-stat-box">
+              <span class="ref-stat-num">15%</span>
+              <span class="ref-stat-lbl">Commission Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card referral-list-card">
+          <h3 class="card-subtitle"><i class="fa-solid fa-users"></i> Your Referral Network</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Joined Date</th>
+                  <th>Your Commission</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="referralTableBody">
+                <tr><td colspan="4" class="text-muted text-center">No referrals yet. Share your link to start earning passively!</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: TRANSACTION LEDGER HISTORY -->
+    <section class="tab-pane" id="tab-history">
+      <div class="glass-card ledger-card">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="card-title"><i class="fa-solid fa-receipt"></i> Wallet Transaction Ledger</h2>
+            <p class="card-desc">All credits, ad rewards, daily bonuses, and withdrawals are cryptographically logged.</p>
+          </div>
+          <button class="btn btn-sm btn-outline" id="btnRefreshHistory"><i class="fa-solid fa-rotate"></i> Refresh</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Coins</th>
+                <th>USD Value</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="transactionsTableBody">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: ADMIN MANAGEMENT HUB -->
+    <section class="tab-pane" id="tab-admin">
+      <div class="admin-layout">
+        <div class="admin-header-row">
+          <div>
+            <div class="badge-tag badge-purple"><i class="fa-solid fa-crown"></i> SUPER ADMIN COMMAND CENTER</div>
+            <h1 class="hero-title">Platform Operations & Economics</h1>
+          </div>
+          <button class="btn btn-primary" id="btnOpenNewCampaignModal"><i class="fa-solid fa-plus"></i> Launch New Ad Campaign</button>
+        </div>
+
+        <!-- Real-Time Metrics -->
+        <div class="admin-metrics-grid">
+          <div class="glass-card metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="metric-data">
+              <span class="metric-val" id="admTotalUsers">0</span>
+              <span class="metric-lbl">Total Registered Users</span>
+            </div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-eye text-cyan"></i></div>
+            <div class="metric-data">
+              <span class="metric-val" id="admTotalViews">0</span>
+              <span class="metric-lbl">Total Ads Completed</span>
+            </div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-chart-line text-accent"></i></div>
+            <div class="metric-data">
+              <span class="metric-val" id="admEstRevenue">$0.00</span>
+              <span class="metric-lbl">Est. Advertiser Revenue</span>
+            </div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-hand-holding-dollar text-gold"></i></div>
+            <div class="metric-data">
+              <span class="metric-val" id="admPaidOut">$0.00</span>
+              <span class="metric-lbl">Paid Out to Users</span>
+            </div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-sack-dollar text-purple"></i></div>
+            <div class="metric-data">
+              <span class="metric-val" id="admNetProfit">$0.00</span>
+              <span class="metric-lbl">Net Platform Profit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Gateways Status & Configuration Hub -->
+        <div class="glass-card admin-section-card">
+          <div class="card-header-flex">
+            <div>
+              <h3 class="card-subtitle"><i class="fa-solid fa-server text-accent"></i> Real Payment Gateways Status</h3>
+              <p class="card-desc" style="font-size: 13px; margin-top: 4px;">Connected payout channels. Configure live credentials in <code>config.js</code> to enable live automated disbursements.</p>
+            </div>
+            <span class="badge-tag badge-emerald"><i class="fa-solid fa-circle-check"></i> Gateway Engine Active</span>
+          </div>
+          <div class="gateway-status-grid" id="admGatewaysGrid">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Pending Payout Approvals -->
+        <div class="glass-card admin-section-card">
+          <div class="card-header-flex">
+            <h3 class="card-subtitle"><i class="fa-solid fa-clock text-gold"></i> Pending Withdrawal Queue</h3>
+            <span class="badge-tag badge-gold" id="admPendingCount">0 Pending</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>User</th>
+                  <th>Method</th>
+                  <th>Destination</th>
+                  <th>Amount</th>
+                  <th>Requested Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admPayoutsTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Active Ad Campaigns Manager -->
+        <div class="glass-card admin-section-card">
+          <h3 class="card-subtitle"><i class="fa-solid fa-bullhorn text-cyan"></i> Active Ad Network Inventory</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Title & Advertiser</th>
+                  <th>Category</th>
+                  <th>Duration</th>
+                  <th>User Reward</th>
+                  <th>eCPM</th>
+                  <th>Remaining Views</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admCampaignsTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- 1. VIDEO AD PLAYER MODAL (WITH ANTI-CHEAT FOCUS DETECTION & PROGRESS) -->
+  <div class="modal-overlay hidden" id="modalAdPlayer">
+    <div class="modal-card ad-player-card">
+      <div class="ad-player-header">
+        <div class="ad-sponsor-info">
+          <span class="ad-badge-live">SPONSORED AD</span>
+          <h3 class="ad-player-title" id="adModalTitle">Ad Title</h3>
+          <span class="ad-player-advertiser" id="adModalAdvertiser">Advertiser Name</span>
+        </div>
+        <div class="ad-timer-pill">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span id="adModalCountdown">15s</span>
+        </div>
+      </div>
+
+      <!-- Video Viewport -->
+      <div class="video-container" id="videoContainer">
+        <video id="adVideoElement" preload="auto" playsinline></video>
+        
+        <!-- Tab Switched Anti-Cheat Warning Overlay -->
+        <div class="tab-cheat-warning hidden" id="tabCheatWarning">
+          <div class="warning-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <h3>Ad Paused: Please Keep Window in Focus</h3>
+          <p>You switched tabs or minimized the browser. To earn your reward, return to this tab to resume playback.</p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="video-loader" id="videoLoader">
+          <div class="spinner"></div>
+          <span>Loading High-Def Video Stream...</span>
+        </div>
+      </div>
+
+      <!-- Playback Progress Bar -->
+      <div class="ad-progress-bar-container">
+        <div class="ad-progress-bar-fill" id="adProgressBarFill"></div>
+      </div>
+
+      <!-- Ad Footer with CTA & Reward Claim -->
+      <div class="ad-player-footer">
+        <div class="ad-reward-promise">
+          <i class="fa-solid fa-coins text-gold"></i>
+          <span>Reward: <strong class="text-accent" id="adModalReward">+35 Coins</strong></span>
+        </div>
+
+        <div class="ad-footer-actions">
+          <a href="#" target="_blank" class="btn btn-outline" id="adModalCtaLink">
+            <span id="adModalCtaText">Visit Sponsor</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <button class="btn btn-primary disabled" id="btnClaimAdReward" disabled>
+            <i class="fa-solid fa-lock"></i> Watch to Complete (<span id="adModalBtnCountdown">15s</span>)
+          </button>
+        </div>
+      </div>
+
+      <!-- Live A-Ads Sponsor in Player -->
+      <div class="aads-player-banner hidden" id="aadsPlayerBanner">
+        <span class="aads-header-tag"><i class="fa-brands fa-bitcoin"></i> Live Sponsor Ad</span>
+        <div class="aads-iframe-wrap" id="aadsIframePlayer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. REWARD SUCCESS CELEBRATION MODAL -->
+  <div class="modal-overlay hidden" id="modalRewardSuccess">
+    <div class="modal-card reward-success-card">
+      <div class="confetti-cannon">🎉</div>
+      <h2 class="modal-title">Reward Claimed!</h2>
+      <div class="coins-earned-display">
+        <i class="fa-solid fa-coins coin-spin-icon"></i>
+        <span id="rewardEarnedAmount">+35</span>
+        <span class="coins-lbl">COINS</span>
+      </div>
+      <p class="reward-desc-text" id="rewardDescText">You have successfully watched the sponsored video ad and credited your balance.</p>
+      
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-block btn-lg" id="btnCloseRewardSuccess">
+          <i class="fa-solid fa-play"></i> Watch Next Video
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. LOGIN MODAL -->
+  <div class="modal-overlay hidden" id="modalLogin">
+    <div class="modal-card auth-card">
+      <button class="modal-close" id="btnCloseLogin">&times;</button>
+      <div class="auth-header">
+        <div class="logo-icon-pulse"><i class="fa-solid fa-play"></i></div>
+        <h2>Welcome Back</h2>
+        <p>Log in to access your wallet, daily rewards, and ad campaigns.</p>
+      </div>
+
+      <form id="formLogin">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="loginEmail" required placeholder="demo@adpulse.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" id="loginPassword" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Log In</button>
+      </form>
+
+      <div class="auth-switch">
+        <span>Don't have an account? <a href="#" id="switchRegister">Sign up free (+100 Coins)</a></span>
+        <div class="demo-hints">
+          <small>💡 <strong>Demo User:</strong> demo@adpulse.com / demo123</small><br>
+          <small>⚡ <strong>Admin:</strong> admin@adpulse.com / admin123</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. REGISTER MODAL -->
+  <div class="modal-overlay hidden" id="modalRegister">
+    <div class="modal-card auth-card">
+      <button class="modal-close" id="btnCloseRegister">&times;</button>
+      <div class="auth-header">
+        <div class="logo-icon-pulse"><i class="fa-solid fa-gift"></i></div>
+        <h2>Create Free Account</h2>
+        <p>Get instant <strong>100 Coins Bonus ($0.10)</strong> on registration!</p>
+      </div>
+
+      <form id="formRegister">
+        <div class="form-group">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-input" id="regUsername" required placeholder="CryptoEarner">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="regEmail" required placeholder="earner@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password (Min 6 chars)</label>
+          <input type="password" class="form-input" id="regPassword" required minlength="6" placeholder="••••••••">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Referral / Invite Code (Optional)</label>
+          <input type="text" class="form-input" id="regReferral" placeholder="e.g. ADMINVIP">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Claim Bonus & Register</button>
+      </form>
+
+      <div class="auth-switch">
+        <span>Already have an account? <a href="#" id="switchLogin">Log In</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. CREATE CAMPAIGN MODAL (ADMIN) -->
+  <div class="modal-overlay hidden" id="modalNewCampaign">
+    <div class="modal-card auth-card">
+      <button class="modal-close" id="btnCloseNewCampaign">&times;</button>
+      <div class="auth-header">
+        <h2>Launch Sponsor Ad Campaign</h2>
+        <p>Add video ads with custom durations, eCPM rates, and user rewards.</p>
+      </div>
+
+      <form id="formNewCampaign">
+        <div class="form-group">
+          <label class="form-label">Campaign Title</label>
+          <input type="text" class="form-input" id="campTitle" required placeholder="e.g. Robinhood Free Stock Promo">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Advertiser / Brand</label>
+          <input type="text" class="form-input" id="campAdvertiser" required placeholder="e.g. Robinhood Markets">
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-input" id="campCategory">
+              <option value="Crypto & Web3">Crypto & Web3</option>
+              <option value="Gaming">Gaming</option>
+              <option value="Fintech & Banking">Fintech & Banking</option>
+              <option value="E-Commerce & SaaS">E-Commerce & SaaS</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Duration (Seconds)</label>
+            <input type="number" class="form-input" id="campDuration" value="15" min="5" max="60" required>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Reward (Coins)</label>
+            <input type="number" class="form-input" id="campReward" value="40" min="5" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Advertiser eCPM ($)</label>
+            <input type="number" class="form-input" id="campCpm" value="15.00" step="0.5" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Video Stream MP4 URL</label>
+          <input type="url" class="form-input" id="campVideoUrl" required value="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
+        </div>
+        <div class="form-group">
+          <label class="form-label">CTA Link URL</label>
+          <input type="url" class="form-input" id="campCtaUrl" required value="https://google.com">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Publish Ad Campaign</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
